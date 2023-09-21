@@ -1,7 +1,7 @@
 const express= require("express");
 
 const App_server=express();
-App_server.get("login",(req, res)=>{
+App_server.get("/login",(req, res)=>{
     res.send("login successful")
 
 })
