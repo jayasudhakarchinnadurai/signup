@@ -1,9 +1,7 @@
 const express= require("express");
+const App_server = require("./app.js");
+const Node_server=express();
+Node_server.use("/",App_server)
 
-const App_server=express();
-App_server.get("/login",(req, res)=>{
-    res.send("login successful")
 
-})
-
-App_server.listen(9000, ()=>console.log("your server start 9000"));
+Node_server.listen( process.env.PORT, ()=>console.log("your server start 9000"));
